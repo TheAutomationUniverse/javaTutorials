@@ -36,7 +36,7 @@ public class C002_Variables {
 //		Initialization of Static variable
 		staticIntVar = 25;
 		System.out.println("The Value of static variable without using object reference: " + staticIntVar);
-		System.out.println("The Value of static variable by using object reference: " + classObject.staticIntVar);
+//		System.out.println("The Value of static variable by using object reference: " + classObject.staticIntVar);
 		System.out.println("The Value of static variable without using object reference: " + staticStringVar);
 
 //		Calling non-static method by using object reference
@@ -65,3 +65,15 @@ public class C002_Variables {
 		System.out.println("The multiplication of local & static variable through static method: " + multiplication);
 	}
 }
+
+// Interview Questions
+// What are the different types of variables in Java?
+// What is the difference between Instance and Static Variables?
+// What is a Local Variable?
+// What is Variable Scope?
+// Why can a Non-Static Method access Static Variables? - Because non-static methods belong to objects, and objects can access both
+// Why can't a Static Method directly access Instance Variables?
+// Can a Static Variable be accessed using an Object?
+// How many copies of a Static Variable exist?
+// How many copies of an Instance Variable exist?
+// Why is the main() method static? - Because JVM calls main() before creating any object. Otherwise, an object would be required before program execution starts.

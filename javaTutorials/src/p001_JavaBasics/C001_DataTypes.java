@@ -6,18 +6,18 @@ public class C001_DataTypes {
 //	Primitive Data Types
 //	1) Already defined
 //	2) It can't be null, must have a value
-//	3) Always starts with lowerCase
+//	3) These are written in lowerCase.
 //	4) Example: byte, short, int, long, float, double, char, boolean
 
 //	Non-Primitive Data Types
 //	1) Defined or created by programmers
 //	2) It can be null
-//	3) Always starts with UpperCase
+//	3) Most of these follows PascalCase naming convention.
 //	4) Example: String, Array, Class, Interface
 
 	static int intTypeDefault;
 	static double doubleTypeDefault;
-	static char charTypeDefault;
+	static char charTypeDefault; // It's a Unicode null character
 	static boolean booleanTypeDefault;
 	static String stringDefault;
 
@@ -66,6 +66,8 @@ public class C001_DataTypes {
 //		------------------------------------------------------------------------------------------------
 
 //		Types of Non-Primitive Data Types
+//		Wrapper Classes convert primitive datatypes into objects.
+//		Collections can store only objects, not primitive values.
 //		A) Integer Types
 //		1) Byte
 		Byte wrapperByte = -128;
@@ -104,22 +106,22 @@ public class C001_DataTypes {
 
 //		------------------------------------------------------------------------------------------------
 
-//		A) Automatic/Implicit Type casting
+//		A) Automatic/Implicit Type casting - Smaller → Bigger
 		int integerValue = 10;
 		float implicitCastingResult = integerValue;
 		System.out.println("The Automatic Type Casting is: " + implicitCastingResult);
 
-//		B) Manual/Explicit Type casting
+//		B) Manual/Explicit Type casting	- Bigger → Smaller
 		float floatValue = 98.89f;
 		int explicitCastingResult = (int) floatValue;
 		System.out.println("The Manual Type Casting is: " + explicitCastingResult);
 
 //		------------------------------------------------------------------------------------------------
 
-		Integer autoBoxing = 10; // AutoBoxing
+		Integer autoBoxing = 10; // AutoBoxing - Primitive → Wrapper
 		System.out.println("AutoBoxing Value: " + autoBoxing);
 
-		int unBoxing = autoBoxing; // UnBoxing
+		int unBoxing = autoBoxing; // UnBoxing - Wrapper → Primitive
 		System.out.println("UnBoxing Value: " + unBoxing);
 
 //		------------------------------------------------------------------------------------------------
@@ -141,7 +143,7 @@ public class C001_DataTypes {
 //		Default Values
 		System.out.println("The Default value of int datatype is: " + intTypeDefault);
 		System.out.println("The Default value of double datatype is: " + doubleTypeDefault);
-		System.out.println("The Default value of char datatype is: " + charTypeDefault);
+		System.out.println("Unicode value of default char datatype is: " + (int) charTypeDefault);
 		System.out.println("The Default value of boolean datatype is: " + booleanTypeDefault);
 		System.out.println("The Default value of String datatype is: " + stringDefault);
 
@@ -152,3 +154,16 @@ public class C001_DataTypes {
 		System.out.println("Byte Max Value: " + Byte.MAX_VALUE);
 	}
 }
+
+// Interview Questions
+// What is the difference between Primitive and Non-Primitive Datatypes?
+// What is the difference between int and Integer?
+// What are Wrapper Classes in Java?
+// What is AutoBoxing and UnBoxing?
+// What is Type Casting?
+// What is the default value of primitive datatypes?
+// Why is the default value of char not visible?
+// What is Overflow and Underflow?
+// How can you find minimum and maximum values without memorizing them?
+// Why is String considered a Non-Primitive Datatype?
+// Why do Collections use Wrapper Classes instead of Primitive Datatypes?
