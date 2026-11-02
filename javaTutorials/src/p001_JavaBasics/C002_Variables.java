@@ -18,6 +18,8 @@ public class C002_Variables {
 	String instanceStringVar = "Java"; // Declaration & Initialization of Instance variable
 	static int staticIntVar; // Declaration of Static variable
 	static String staticStringVar = "Selenium"; // Declaration & Initialization of Static variable
+	int number;
+	char character;
 
 	public static void main(String[] args) {
 		System.out.println("Inside main() method");
@@ -28,22 +30,55 @@ public class C002_Variables {
 
 //		Initialization of Instance variable
 		classObject.instanceIntVar = 183;
-		System.out
-				.println("The Value of Instance variable int by using object reference: " + classObject.instanceIntVar);
-		System.out.println(
-				"The Value of Instance variable String by using object reference: " + classObject.instanceStringVar);
+		System.out.println("The Value of Instance variable using object reference: " + classObject.instanceIntVar);
+		System.out.println("The Value of Instance variable using object reference: " + classObject.instanceStringVar);
 
 //		Initialization of Static variable
 		staticIntVar = 25;
 		System.out.println("The Value of static variable without using object reference: " + staticIntVar);
-//		System.out.println("The Value of static variable by using object reference: " + classObject.staticIntVar);
 		System.out.println("The Value of static variable without using object reference: " + staticStringVar);
+
+//		NOT RECOMMENDED - should be accessed in a static way
+//		System.out.println("The Value of static variable by using object reference: " + classObject.staticIntVar);
 
 //		Calling non-static method by using object reference
 		classObject.addition();
 
 //		Calling static method without using object reference
 		multiplication();
+
+//		Calling static method by using object reference - NOT RECOMMENDED - should be accessed in a static way
+//		classObject.multiplication();
+
+//		Example
+		C002_Variables classObject1 = new C002_Variables();
+		classObject1.number = 200;
+		classObject1.character = 'X';
+		C002_Variables classObject2 = new C002_Variables();
+		classObject2.number = 300;
+		classObject2.character = 'Y';
+		C002_Variables classObject3 = new C002_Variables();
+		classObject3.number = 400;
+		classObject3.character = 'Z';
+
+		System.out.println("Before Referencing");
+		System.out.println(classObject1.number); // 200
+		System.out.println(classObject1.character); // X
+		System.out.println(classObject2.number); // 300
+		System.out.println(classObject2.character); // Y
+		System.out.println(classObject3.number); // 400
+		System.out.println(classObject3.character); // Z
+
+		System.out.println("After Referencing");
+		classObject1 = classObject2;
+		classObject2 = classObject3;
+		classObject3 = classObject1;
+		System.out.println(classObject1.number); // 300
+		System.out.println(classObject1.character); // Y
+		System.out.println(classObject2.number); // 400
+		System.out.println(classObject2.character); // Z
+		System.out.println(classObject3.number); // 300
+		System.out.println(classObject3.character); // Y
 	}
 
 	public void addition() {
