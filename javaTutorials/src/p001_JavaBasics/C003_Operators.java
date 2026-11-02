@@ -33,10 +33,10 @@ public class C003_Operators {
 
 //		------------------------------------------------------------------------------------------------
 
-//		C) Relational Operators			==, !=, >, <, >=, <=
+//		C) Comparison Operators			==, !=, >, <, >=, <=
 		int number4 = 4;
 		int number5 = 5;
-		System.out.println("\nRelational Operators: ==, !=, >, <, >=, <=");
+		System.out.println("\nComparison Operators: ==, !=, >, <, >=, <=");
 		System.out.println("number4: " + number4 + " | number5: " + number5);
 		System.out.println("number4 == number5 : " + (number4 == number5)); // false
 		System.out.println("number4 != number5 : " + (number4 != number5)); // true
@@ -111,12 +111,20 @@ public class C003_Operators {
 }
 
 // Interview Questions
+// What is the difference between = and ==? 	
+// = Used to assign a value, Does not return boolean.
+// == Used to compare two values, Returns boolean (true or false)
+
+// What is the difference between & and &&?
+// && (Logical AND) - Uses Short-Circuit Evaluation, If the first condition is false, Java does not evaluate the second condition.
+// Faster and Commonly used in if conditions.
+// & (Bitwise AND) - Evaluates Both Conditions, Even if the first condition is false, Java still evaluates the second condition.
+// Slower and Commonly used in boolean operations.
+
 // What are the different types of operators in Java?
-// What is the difference between = and ==?
-// What is the difference between Post Increment and Pre Increment?
-// What is the difference between Post Decrement and Pre Decrement?
-// What are Relational Operators?
+// What are Comparison Operators?
 // What are Logical Operators?
 // What is the Ternary Operator?
 // What are Short-Circuit Operators?
-// What is the difference between && and &?
+// What is the difference between Post Increment and Pre Increment?
+// What is the difference between Post Decrement and Pre Decrement?
