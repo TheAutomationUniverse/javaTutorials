@@ -121,7 +121,7 @@ public class C004_StringConcept {
 // Difference between compareTo() and equals() ?
 // compareTo() - Used to compare Strings lexicographically(dictionary/alphabetical order based on Unicode values).
 // Returns an int value like 0, positive number, negative number.
-// equals() - Use to check only equality.
+// equals() - Used to check whether the contents of two Strings are equal.
 // Returns boolean value
 
 // What is StringBuffer & StringBuilder ?
