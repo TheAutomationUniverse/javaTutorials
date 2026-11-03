@@ -44,6 +44,8 @@ public class C005_ConditionalStatements {
 //		------------------------------------------------------------------------------------------------
 
 //		switch case
+//		Switch supports byte, short, int, char, String and enum types.
+//		float, double, long and boolean are not allowed.
 		switch (number2) {
 		case 1:
 			System.out.println("Monday");
