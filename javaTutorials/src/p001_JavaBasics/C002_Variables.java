@@ -49,36 +49,6 @@ public class C002_Variables {
 
 //		Calling static method by using object reference - NOT RECOMMENDED - should be accessed in a static way
 //		classObject.multiplication();
-
-//		Example
-		C002_Variables classObject1 = new C002_Variables();
-		classObject1.number = 200;
-		classObject1.character = 'X';
-		C002_Variables classObject2 = new C002_Variables();
-		classObject2.number = 300;
-		classObject2.character = 'Y';
-		C002_Variables classObject3 = new C002_Variables();
-		classObject3.number = 400;
-		classObject3.character = 'Z';
-
-		System.out.println("Before Referencing");
-		System.out.println(classObject1.number); // 200
-		System.out.println(classObject1.character); // X
-		System.out.println(classObject2.number); // 300
-		System.out.println(classObject2.character); // Y
-		System.out.println(classObject3.number); // 400
-		System.out.println(classObject3.character); // Z
-
-		System.out.println("After Referencing");
-		classObject1 = classObject2;
-		classObject2 = classObject3;
-		classObject3 = classObject1;
-		System.out.println(classObject1.number); // 300
-		System.out.println(classObject1.character); // Y
-		System.out.println(classObject2.number); // 400
-		System.out.println(classObject2.character); // Z
-		System.out.println(classObject3.number); // 300
-		System.out.println(classObject3.character); // Y
 	}
 
 	public void addition() {
@@ -109,6 +79,6 @@ public class C002_Variables {
 // Why can a Non-Static Method access Static Variables? - Because non-static methods belong to objects, and objects can access both
 // Why can't a Static Method directly access Instance Variables?
 // Can a Static Variable be accessed using an Object?
-// How many copies of a Static Variable exist?
-// How many copies of an Instance Variable exist?
+// How many copies of a Static Variable exist? - single copy shared among all objects
+// How many copies of an Instance Variable exist? - each object has it's own copy
 // Why is the main() method static? - Because JVM calls main() before creating any object. Otherwise, an object would be required before program execution starts.
