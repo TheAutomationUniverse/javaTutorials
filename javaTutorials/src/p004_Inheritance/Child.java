@@ -6,15 +6,26 @@ package p004_Inheritance;
 // parent - the class whose members are inherited.
 // The 'extends' keyword is used in a child class to inherit properties and behaviors from a parent class.
 // Inheritance is used for code reusability and avoids code duplication.
-// Multiple inheritance is supported only with Interfaces not with classes.
 // Constructors are not inherited; but parent constructor gets executed when child class object is created.
 // If both parent and child classes have common properties and behaviors, then preference is given to child class.
 // The 'super' keyword is used to access parent class constructors, variables and methods.
-// one child class can have only one parent class but, one parent class can have multiple child classes.
+// One child class can have only one parent class, but one parent class can have multiple child classes.
 
 // Can Private Members Be Inherited ?
 // Yes. Private members are inherited as part of the object.
 // but they cannot be directly accessed in the child class because their visibility is restricted to the parent class.
+
+// Types of Inheritance:
+// 1) Single Inheritance - Child extends Parent
+// 2) Multilevel Inheritance - Child extends Parent and Parent extends GrandParent
+// 3) Hierarchical Inheritance - Child1 extends Parent and Child2 extends Parent
+// 4) Multiple Inheritance - Not supported through Class. Requires Interface.
+
+// Why Doesn't Java Support Multiple Inheritance Through Classes ? - To avoid Diamond Problem.
+// Suppose we have a method with same signature in both Parent1 and Parent2 then, Java wouldn't know which method to execute.
+
+// How does this Diamond Problem resolved in Interfaces ?
+// The Diamond Problem can occur with interface default methods, but Java forces the implementing class to override the conflicting method.
 
 public class Child extends Parent {
 	public String childName = "Gracy";
@@ -109,6 +120,7 @@ public class Child extends Parent {
 		child.parentFinalMethod();
 
 //		Upcasting - Here child class object is created but the object reference is addressing to parent class.
+//		Reference Type = Parent | Object Type = Child
 		Parent parent = new Child();
 
 //		child class method will execute - Because Java finds an overridden method during runtime.
