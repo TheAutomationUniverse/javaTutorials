@@ -66,6 +66,9 @@ public class C008_Methods {
 // What is Method Overloading ? - Same method name with different parameter lists.
 // What is a Method Signature ? - It consists of method name & Parameter list.
 
+// Can we have a method with same signature & different return type ?
+// No. It will give Compile Error because return type is not part of method signature.
+
 // What is the purpose of return statement ? - It ends the method execution and sends a value back to the caller.
 
 // Difference between return type and void ?
