@@ -1,6 +1,6 @@
 package p004_Inheritance;
 
-public class Parent {
+public class ParentClass {
 	public String parentName = "David";
 	protected int parentAge = 44;
 	char parentGender = 'M';
@@ -9,19 +9,19 @@ public class Parent {
 	static boolean parentHaveKids = false;
 	String hobby = "Football";
 
-	public Parent() {
+	public ParentClass() {
 		System.out.println("Parent: Public Constructor");
 	}
 
-	protected Parent(int age) {
+	protected ParentClass(int age) {
 		System.out.println("Parent: Protected Constructor");
 	}
 
-	Parent(float height, double salary) {
+	ParentClass(float height, double salary) {
 		System.out.println("Parent: Default Constructor");
 	}
 
-	private Parent(boolean haveKids) {
+	private ParentClass(boolean haveKids) {
 		System.out.println("Parent: Private Constructor");
 		parentHaveKids = haveKids;
 		System.out.println("Parent Have Kids: " + parentHaveKids);
@@ -65,7 +65,7 @@ public class Parent {
 
 	public static void main(String[] args) {
 		System.out.println("Parent: main() Method");
-		Parent parent = new Parent(true);
+		ParentClass parent = new ParentClass(true);
 		System.out.println("Parent Height: " + parent.parentHeight);
 		parent.parentPrivateMethod();
 	}

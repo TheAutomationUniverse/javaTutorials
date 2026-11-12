@@ -27,7 +27,7 @@ package p004_Inheritance;
 // How does this Diamond Problem resolved in Interfaces ?
 // The Diamond Problem can occur with interface default methods, but Java forces the implementing class to override the conflicting method.
 
-public class Child extends Parent {
+public class ChildClass extends ParentClass {
 	public String childName = "Gracy";
 	protected int childAge = 22;
 	char childGender = 'F';
@@ -36,7 +36,7 @@ public class Child extends Parent {
 	static boolean childHaveKids = true;
 	String hobby = "Chess";
 
-	public Child() {
+	public ChildClass() {
 		System.out.println("Child: Public Constructor");
 //		Inherited parent class properties
 		System.out.println("Parent Name: " + parentName);
@@ -46,15 +46,15 @@ public class Child extends Parent {
 		System.out.println("Parent Have Kids: " + parentHaveKids);
 	}
 
-	protected Child(int age) {
+	protected ChildClass(int age) {
 		System.out.println("Child: Protected Constructor");
 	}
 
-	Child(float height, double salary) {
+	ChildClass(float height, double salary) {
 		System.out.println("Child: Default Constructor");
 	}
 
-	private Child(boolean haveKids) {
+	private ChildClass(boolean haveKids) {
 		System.out.println("Child: Private Constructor");
 		childHaveKids = haveKids;
 		System.out.println("Child Have Kids: " + childHaveKids);
@@ -109,7 +109,7 @@ public class Child extends Parent {
 
 	public static void main(String[] args) {
 		System.out.println("Child: main() Method");
-		Child child = new Child(false);
+		ChildClass child = new ChildClass(false);
 		System.out.println("Child Height: " + child.childHeight);
 		child.childPrivateMethod();
 
@@ -121,7 +121,7 @@ public class Child extends Parent {
 
 //		Upcasting - Here child class object is created but the object reference is addressing to parent class.
 //		Reference Type = Parent | Object Type = Child
-		Parent parent = new Child();
+		ParentClass parent = new ChildClass();
 
 //		child class method will execute - Because Java finds an overridden method during runtime.
 		parent.commonMethod();
@@ -134,7 +134,7 @@ public class Child extends Parent {
 		staticMethod();
 
 //		child class method will execute - Because here object reference is not used
-		Child.staticMethod();
+		ChildClass.staticMethod();
 
 //		parent class method will execute - Because object reference is addressing to parent class.
 //		parent.staticMethod(); // This is not even recommended as static method should be accessed in a static way
