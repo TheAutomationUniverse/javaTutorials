@@ -1,6 +1,6 @@
 package p005_Abstraction;
 
-// Child Interface 'Interface1' extending Parent Interface 'Interface2'
+// Child Interface 'Interface1' extending Parent Interface 'Interface'
 public interface Interface1 extends Interface {
 
 //	abstract method

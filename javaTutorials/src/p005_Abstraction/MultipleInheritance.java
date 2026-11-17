@@ -5,10 +5,11 @@ package p005_Abstraction;
 // Interface1 - Parent1
 // Interface2 - Parent2
 
-// Class - extends > One Class && implements > One or More Interfaces
+// Class - extends > One Class
+// Class - implements > One or More Interfaces
 // Interface - extends > One or More Interfaces
-// Interface never extends or implements a Class.
 // Interface does not use 'implements' keyword.
+// Interface never extends or implements a Class.
 
 public class MultipleInheritance implements Interface1, Interface2 {
 
@@ -48,6 +49,8 @@ public class MultipleInheritance implements Interface1, Interface2 {
 	}
 
 //	Diamond Problem Resolution
+//	Diamond Problem occurs when multiple interfaces provide default methods with the same signature.
+//	Java resolves this by forcing the implementing class to override the conflicting method.
 	@Override
 	public void test() {
 		System.out.println("Overridden test() Method");
