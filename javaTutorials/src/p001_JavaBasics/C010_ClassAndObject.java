@@ -72,7 +72,7 @@ public class C010_ClassAndObject {
 		System.out.println("Addition is: " + total);
 	}
 
-//	Method to explain the concept of call by object reference values
+//	Method to explain the concept of call by values using object reference
 	public static void multiplication(C010_ClassAndObject object) {
 		int total = object.number3 * object.number4;
 		System.out.println("Multiplication is: " + total);
@@ -102,4 +102,4 @@ public class C010_ClassAndObject {
 
 // Interview Questions
 // Is Java Call By Value or Call By Reference ? - Java is always Call By Value
-// What is a Object Reference Variable ? - It stores the address/reference of an object
+// What is a Object Reference Variable ? - It stores a reference to an object.

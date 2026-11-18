@@ -11,9 +11,12 @@ package p004_Inheritance;
 // The 'super' keyword is used to access parent class constructors, variables and methods.
 // One child class can have only one parent class, but one parent class can have multiple child classes.
 
+// 'static' block - executes once when the class is loaded into memory.
+// 'instance' block - executes every time an object is created, before the constructor execution.
+
 // Can Private Members Be Inherited ?
-// Yes. Private members are inherited as part of the object.
-// but they cannot be directly accessed in the child class because their visibility is restricted to the parent class.
+// Private members of a parent class cannot be directly accessed by the child class.
+// They remain part of the parent class portion of the object. Access can be provided through public or protected methods.
 
 // Types of Inheritance:
 // 1) Single Inheritance - Child extends Parent

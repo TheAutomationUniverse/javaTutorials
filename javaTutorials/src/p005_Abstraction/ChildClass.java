@@ -11,7 +11,7 @@ public class ChildClass extends AbstractClass implements Interface {
 	@Override
 //	While overriding, if the same method is inherited from both an Abstract class and an Interface, then the implementation must satisfy both contracts.
 //	abstractMethod() in AbstractClass has 'default' access.
-//	abstractMethod() in Interface has also 'default' access but Java converts it to 'public' access.
+//	abstractMethod() in Interface has implicitly 'public' access
 //	Therefore the overriding method must be declared as public, because visibility cannot be reduced during overriding.
 	public void abstractMethod() {
 		System.out.println("Child Class - Abstract Method");

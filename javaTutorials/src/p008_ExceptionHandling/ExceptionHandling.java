@@ -5,7 +5,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 
 public class ExceptionHandling {
-//	Exception Handling is a mechanism to handle runtime errors, so that normal execution of the program can continue.
+//	Exception handling is a mechanism to handle exceptional conditions and maintain the normal flow of program execution.
 //	'Throwable' is the Parent class of 'Exception' & 'Error'
 //	Error - Generally not recoverable - Example - OutOfMemoryError, StackOverflowError
 //	Exception - Can be handled
