@@ -63,9 +63,10 @@ public class C001_CollectionsOverview {
 //	    		HashSet       -> No guaranteed iteration order.
 //	    		LinkedHashSet -> Maintains insertion order.
 //	    		TreeSet       -> Maintains sorted order.
-//			4) 'HashSet' & 'LinkedHashSet' these Classes implements 'Set' Interface
-//			5) 'SortedSet' Interface extends 'Set' Interface
-//			6) 'TreeSet' Class implements 'NavigableSet' Interface which extends 'SortedSet' Interface
+//			4) 'HashSet' Class implements 'Set' Interface
+//			5) 'LinkedHashSet' Class extends 'HashSet' Class and implements 'Set' Interface
+//			6) 'SortedSet' Interface extends 'Set' Interface
+//			7) 'TreeSet' Class implements 'NavigableSet' Interface which extends 'SortedSet' Interface
 
 //		E) Queue(Interface) - extends Collection(Interface)
 //			1) Queue is used to hold elements before processing.
@@ -75,11 +76,12 @@ public class C001_CollectionsOverview {
 //			5) PriorityQueue processes elements according to priority, not insertion order.
 //			6) 'ArrayDeque' & 'LinkedList' these Classes implements 'Deque' Interface which extends 'Queue' Interface.
 
-//		F) Map(Interface) - part of Collections Framework but does NOT extends Collection Interface.
+//		F) Map(Interface) - part of Collections Framework but does not extend Collection Interface.
 //			1) Stores elements in <Key, Value> format.
 //			2) 'Key' must be unique but, 'Value' can be duplicate.
-//			3) 'HashMap', 'LinkedHashMap', & 'Hashtable' these Classes implements 'Map' Interface.
-//			4) 'TreeMap' Class implements 'NavigableMap' Interface which extends 'SortedMap' Interface which extends 'Map' Interface.
+//			3) 'HashMap' & 'Hashtable' these Classes implements 'Map' Interface.
+//			4) 'LinkedHashMap' Class extends 'HashMap' Class and implements 'Map' Interface.
+//			5) 'TreeMap' Class implements 'NavigableMap' Interface which extends 'SortedMap' Interface which extends 'Map' Interface.
 
 //		------------------------------------------------------------------------------------------------
 
